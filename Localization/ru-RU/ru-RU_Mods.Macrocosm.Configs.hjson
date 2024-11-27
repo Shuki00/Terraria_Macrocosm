@@ -1,0 +1,55 @@
+# Localization file for the configs
+
+MacrocosmConfig: {
+	DisplayName: General Configuration
+	WorldGenHeader: World Generation
+	GameplayHeader: Gameplay
+	GraphicsHeader: Graphics
+	UIHeader: User Interface
+
+	AlwaysDisplayTitleCards: {
+		Label: Always display title cards
+		Tooltip: Whether to display the introductory title card even if you've visited this celestial body before.
+	}
+
+	GunRecoilEffects: {
+		Label: Gun recoil effects
+		Tooltip: Whether guns have recoil effects.
+	}
+
+	HighResolutionEffects: {
+		Label: High Resolution Effects
+		Tooltip: Use high resolution visual effects.
+	}
+
+	UnitSystem: {
+		Label: Unit system
+		Tooltip: The unit system used to display numeric values.
+	}
+
+	DisplayGravityInGs: {
+		Label: Display gravity values in Gs
+		Tooltip: Whether to display the gravity in Gs, or gravitational acceleration measured in the current unit system.
+	}
+
+	SelectedUITheme: {
+		Label: UI Theme
+		Tooltip: The mod's UI display theme.
+	}
+
+	DisableSilicaSandGeneration: {
+		Label: Disable Silica Sand Generation
+		Tooltip: Disable the generation of Silica Sand underneath the Ocean, to avoid breaking other mods' biomes.
+	}
+
+	DisableOilShaleGeneration: {
+		Label: Disable Oil Shale Generation
+		Tooltip: ""
+	}
+}
+
+UnitSystemType: {
+	Tooltip: ""
+	Metric.Label: Metric
+	Imperial.Label: Imperial
+}
