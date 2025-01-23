@@ -1,0 +1,154 @@
+Fear: {
+	DisplayName: Fear
+	Description: OH GOD WHAT IS THAT?!
+}
+
+SuitBreach: {
+	DisplayName: Suit Breach
+	Description: You are exposed to the elements!
+}
+
+Depressurized: {
+	DisplayName: Depressurized
+	Description: Your blood is boiling!
+}
+
+ChandriumWhipBuff: {
+	DisplayName: Chandrium Empowerment
+	Description: Your next hit with your Chandrium Whip will deal increased damage!
+}
+
+CalcicCaneMinionBuff: {
+	DisplayName: Crater Imp
+	Description: The crater imp will fight for you
+}
+
+ChandriumStaffMinionBuff: {
+	DisplayName: Crescent Ghoul
+	Description: The crescent ghoul will fight for you
+}
+
+SpaceShuttle: {
+	DisplayName: Space Shuttle
+	Description: In memory of STS-51-L and STS-107.
+}
+
+Procellarum_LightningMarkDebuff: {
+	DisplayName: Procellarum Lightning Mark
+	Description: You take double damage from Procellarum's light bolts.
+}
+
+HandheldEngineOverheat: {
+	DisplayName: Handheld Engine Overheat
+	Description: Your weapon has overheated!
+}
+
+CraterDemonPet: {
+	DisplayName: Mini Crater Demon
+	Description: He's up to something...
+}
+
+MedkitHigh: {
+	DisplayName: Medkit
+	Description: You are healing
+}
+
+MedkitLow: {
+	DisplayName: Medkit
+	Description: You are healing
+}
+
+MedkitMedium: {
+	DisplayName: Medkit
+	Description: You are healing
+}
+
+Irradiated: {
+	DisplayName: Irradiated
+	Description: You have radiation sickness
+}
+
+Blindness: {
+	DisplayName: Blindness
+	Description: Decreased vision
+}
+
+MildNecrosis: {
+	DisplayName: Mild Necrosis
+	Description: Your body is decaying
+}
+
+Necrosis: {
+	DisplayName: Necrosis
+	Description: Your body is rapidly decaying
+}
+
+OrganFailure: {
+	DisplayName: Organ Failure
+	Description: Your organs are failing
+}
+
+Paralysis: {
+	DisplayName: Paralysis
+	Description: You cannot move!
+}
+
+WeakBones: {
+	DisplayName: Weak Bones
+	Description: You feel weak...
+}
+
+Fatigue: {
+	DisplayName: Fatigue
+	Description: You feel tired...
+}
+
+AntiRadiationPills: {
+	DisplayName: Anti Radiation Pills
+	Description: You have been cured from radiation sickness
+}
+
+Melting: {
+	DisplayName: Melting
+	Description: You are melting
+}
+
+HummingbirdDroneSummonBuff: {
+	DisplayName: P.D.C.D. "Hummingbird"
+	Description: The combat drone will protect you
+}
+
+GreatstaffOfHorusMinionBuff: {
+	DisplayName: Greatstaff Of Horus Minion Buff
+	Description: The solar granule will fight for you
+}
+
+HorusBurn: {
+	DisplayName: Horus Burn
+	Description: Burned by the light of the brightest star
+}
+
+RyuguSummonBuff: {
+	DisplayName: Ryugu Summon Buff
+	Description: The Ryugu will fight for you
+}
+
+ProcellarumLightningMarkDebuff: {
+	DisplayName: Procellarum Lightning Mark Debuff
+	Description: Mods.Macrocosm.Buffs.ProcellarumLightningMarkDebuff.Description
+}
+
+ProcellarumLightningMark: {
+	DisplayName: Procellarum Lightning Mark
+	Description: Mods.Macrocosm.Buffs.ProcellarumLightningMark.Description
+}
+
+TotalitySlashed: {
+	DisplayName: Totality Slashed
+	Description: Mods.Macrocosm.Buffs.TotalitySlashed.Description
+}
+
+TotalityTag: {
+	DisplayName: Totality Tag
+	Description: Mods.Macrocosm.Buffs.TotalityTag.Description
+}
