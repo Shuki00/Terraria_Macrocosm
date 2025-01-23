@@ -1,39 +1,39 @@
 EarthBiome: {
-	DisplayName: Earth
-	TownNPCDialogueName: the Earth
+	DisplayName: Земля
+	TownNPCDialogueName: Земля
 }
 
 MoonBiome: {
-	DisplayName: The Moon
-	TownNPCDialogueName: the Moon
+	DisplayName: Луна
+	TownNPCDialogueName: Луна
 }
 
 BloodMoonBiome: {
-	DisplayName: Blood Moon
-	TownNPCDialogueName: Blood Moon
+	DisplayName: Кровавая Луна
+	TownNPCDialogueName: Кровавая Луна
 }
 
 BasaltBiome: {
-	DisplayName: Basalt
-	TownNPCDialogueName: the Basalt
+	DisplayName: Базальт
+	TownNPCDialogueName: Базальт
 }
 
 IrradiationBiome: {
-	DisplayName: The Irradiation
-	TownNPCDialogueName: the Irradiation
+	DisplayName: Радиация
+	TownNPCDialogueName: Радиация
 }
 
 DemonSunBiome: {
-	DisplayName: Demon Sun Biome
-	TownNPCDialogueName: the Demon Sun
+	DisplayName: Биом демонического Солнца
+	TownNPCDialogueName: Демоническое Солнце
 }
 
 MoonNightBiome: {
-	DisplayName: Moon Night
-	TownNPCDialogueName: the Moon Night
+	DisplayName: Лунная ночь
+	TownNPCDialogueName: Лунная ночь
 }
 
 MoonUndergroundBiome: {
-	DisplayName: Moon Underground
-	TownNPCDialogueName: the Moon Underground
+	DisplayName: Лунное подземелье
+	TownNPCDialogueName: Лунное подземелье
 }
