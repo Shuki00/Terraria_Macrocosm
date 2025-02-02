@@ -49,7 +49,7 @@ namespace Macrocosm.Content.Projectiles.Friendly.Ranged
             Projectile.extraUpdates += (int)Projectile.ai[1];
             Projectile.penetrate = (int)Projectile.ai[2];
         }
-
+        public bool hitExplosion;
         public override void AI()
         {
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
@@ -70,13 +70,66 @@ namespace Macrocosm.Content.Projectiles.Friendly.Ranged
                 Lighting.AddLight(Projectile.Center, Color.Lerp(colour1, colour2, MathF.Pow(MathF.Cos(colourLerpProg / 10f), 3)).ToVector3() * 1.5f);
                 colourLerpProg++;
             }
+
+            if (!hitExplosion)
+            {
+                Projectile explosion = Utility.FindClosestProjectileOfType(Projectile.Center, ModContent.ProjectileType<IlmeniteExplosion>());
+                if (explosion is not null)
+                {
+                    if (Vector2.Distance(Projectile.Center, explosion.Center) < 50f)
+                    {
+                        Vector2 targetCenter = new Vector2(-1000000, -1000000);
+                        float distanceFromTarget = 1200f;
+                        bool foundTarget = false;
+                        for (int i = 0; i < Main.maxNPCs; i++)
+                        {
+                            NPC npc = Main.npc[i];
+
+                            if (npc.CanBeChasedBy())
+                            {
+                                float between = Vector2.Distance(npc.Center, Projectile.Center);
+                                bool closest = Vector2.Distance(Projectile.Center, targetCenter) > between;
+                                bool inRange = between < distanceFromTarget;
+                                bool lineOfSight = Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, npc.position, npc.width, npc.height);
+
+                                bool closeThroughWall = between < 100f;
+
+                                if (((closest && inRange) || !foundTarget) && (lineOfSight || closeThroughWall))
+                                {
+                                    targetCenter = npc.Center;
+                                    foundTarget = true;
+                                    distanceFromTarget = between;
+                                }
+                            }
+                        }
+
+                        IlmeniteRegularProj regular = (Projectile.NewProjectileDirect(
+                            Projectile.GetSource_FromAI(),
+                            Projectile.Center,
+                            ((targetCenter - Projectile.Center).SafeNormalize(Vector2.UnitX) * Projectile.velocity.Length()).RotatedByRandom(MathHelper.Pi / 7),
+                            ModContent.ProjectileType<IlmeniteRegularProj>(),
+                            Projectile.damage / 2,
+                            2,
+                            -1,
+                            Projectile.ai[0],
+                            Projectile.ai[1],
+                            Projectile.ai[2]
+                        ).ModProjectile as IlmeniteRegularProj);
+                        regular.Projectile.scale *= 0.7f;
+                        regular.hitExplosion = true;
+                        hitExplosion = true;
+                        (explosion.ModProjectile as IlmeniteExplosion).OnHit();
+                    }
+
+                }
+            }
         }
 
         public override void OnKill(int timeLeft)
         {
             SoundEngine.PlaySound(SoundID.Item10);
 
-            for (int i = 0; i < 65; i++)
+            for (int i = 0; i < 25; i++)
             {
                 Particle.Create<TintableSpark>((p) =>
                 {
